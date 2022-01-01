@@ -1,9 +1,8 @@
-FROM fusuf/whatsasena:latest
+FROM quay.io/lyfe00011/test:beta
 
-RUN git clone https://github.com/Amal-ser/Amalser /root/WhatsAsenaDuplicated
+RUN git clone https://github.com/ABUOP1/ABU_SER_v2 /root/WhatsAsenaDuplicated
 WORKDIR /root/WhatsAsenaDuplicated/
-ENV TZ=Asia/Kolkata
-RUN npm install supervisor -g
 RUN yarn install --no-audit
-
+RUN git clone https://github.com/ABUOP1/Nandhuttynew
+RUN cp -R /root/Utils/* /root/WhatsAsenaDuplicated 
 CMD ["node", "bot.js"]
